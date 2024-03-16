@@ -1,0 +1,8 @@
+sudo apt update
+sudo apt install openssh-server
+sudo service ssh start
+sudo systemctl enable ssh
+sudo service ssh restart
+
+
+#ssh username@server_ip
