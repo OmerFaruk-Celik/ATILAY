@@ -6,3 +6,5 @@ sudo service ssh restart
 
 
 #ssh username@server_ip
+
+#GEREKLIDIR
