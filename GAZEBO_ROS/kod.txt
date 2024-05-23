@@ -13,6 +13,8 @@ https://askubuntu.com/questions/682869/how-do-i-install-a-different-python-versi
 -------------------------------------------------------------------------
                 	UBUNTU 18.04
 -------------------------------------------------------------------------
+sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install git
 sudo apt install python3-wxgtk4.0
 sudo apt-get install build-essential libgtk-3-dev
