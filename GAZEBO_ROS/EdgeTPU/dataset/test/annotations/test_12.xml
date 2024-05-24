@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>test_12.jpg</filename>
+	<path>/home/celik/objectDetection/kare/test/test_12.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>dikdortgen</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>438</xmin>
+			<ymin>79</ymin>
+			<xmax>845</xmax>
+			<ymax>658</ymax>
+		</bndbox>
+	</object>
+</annotation>

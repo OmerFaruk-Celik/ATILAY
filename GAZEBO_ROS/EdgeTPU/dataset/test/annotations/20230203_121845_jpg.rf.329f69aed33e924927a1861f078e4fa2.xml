@@ -1,0 +1,27 @@
+<annotation>
+	<folder />
+	<filename>20230203_121845_jpg.rf.329f69aed33e924927a1861f078e4fa2.jpg</filename>
+	<path>20230203_121845_jpg.rf.329f69aed33e924927a1861f078e4fa2.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>daire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>198</xmin>
+			<xmax>481</xmax>
+			<ymin>280</ymin>
+			<ymax>587</ymax>
+		</bndbox>
+	</object>
+</annotation>

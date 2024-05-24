@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>istockphoto-1056748350-612x612.jpg</filename>
+	<path>/home/celik/objectDetection/kare/test/istockphoto-1056748350-612x612.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>612</width>
+		<height>612</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>daire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>66</xmin>
+			<ymin>75</ymin>
+			<xmax>535</xmax>
+			<ymax>538</ymax>
+		</bndbox>
+	</object>
+</annotation>
