@@ -1,0 +1,62 @@
+pip install -r requirements.txt
+python3 -m pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral
+pip3 install --extra-index-url https://google-coral.github.io/py-repo/ pycoral
+pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime
+
+pip install pycocotools
+
+sudo apt-get update
+sudo apt-get install libgtk2.0-dev pkg-config
+pip install opencv-python
+pip install -r requirements.txt
+
+
+
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+
+sudo apt-get update
+
+sudo apt-get install edgetpu-compiler
+
+
+
+
+Edge TPU Derleyicisini Yükleme:
+
+Edge TPU derleyicisini henüz yüklemediyseniz, aşağıdaki komutu kullanarak kurabilirsiniz:
+
+      
+sudo apt-get update
+sudo apt-get install edgetpu-compiler
+
+    
+
+Use code with caution.Bash
+
+Modeli Derleme:
+
+Edge TPU derleyicisini kullanarak modelinizi derlemek için aşağıdaki komutu kullanın:
+
+      
+edgetpu_compiler efficientdet-lite-salad.tflite \
+    -o . \
+    -a {arch} \
+    -s
+
+    
+
+Use code with caution.Bash
+
+    efficientdet-lite-salad.tflite: Modelinizin dosya adı.
+
+    -o .: Çıktı dosyasının kaydedileceği dizin (mevcut dizin).
+
+    -a {arch}: Edge TPU mimarisi. Örneğin, Coral USB Accelerator için -a v2 veya Coral Dev Board için -a v1 kullanabilirsiniz.
+
+    -s: Tek bir Edge TPU için derleme yapılacağını belirtir.
+
+Çıktı Dosyası:
+
+Derleme işlemi tamamlandıktan sonra, modelinizin Edge TPU'da çalıştırılabilen versiyonu efficientdet-lite-salad_edgetpu.tflite adıyla kaydedilecektir.
