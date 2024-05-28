@@ -123,6 +123,9 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 ![Harita](images/map.png)
 ![Havuz Testi](images/sim1.png)
 
+#Kontrol İstasyonu
+![İstasyon](images/kontrol_istasyonu.png)
+
 ## 🤝  Katkıda Bulunma
 
 ATILAY projesine katkıda bulunmak isterseniz, lütfen [GitHub repo linki](https://github.com/OmerFaruk-Celik/ATILAY) adresinden iletişime geçin.
