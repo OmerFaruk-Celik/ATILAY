@@ -103,12 +103,18 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 
 ##  📸  Proje Görselleri
 
+#Araç Tasarımı
 ![AMKS Sistem Şeması](images/amks_sistem_semasi.png)
 ![Aracın Mekanik Tasarımı](images/mekanik_tasarim.png)
 ![Elektronik Bileşenler](images/elektronik_bilesenler.png)
-![Algoritma Akış Diyagramı](images/algoritma_akis.png)
+
+#Algoritmalar
+![Algoritma Akış Diyagramı](images/algoritma_akis0.png)
+![Algoritma Akış Diyagramı](images/algoritma_akis1.png)
+![Algoritma Akış Diyagramı](images/algoritma_akis2.png)
+![Algoritma Akış Diyagramı](images/algoritma_akis3.png)
 ![Simülasyon Görüntüsü](images/sim.png)
-![Havuz Testi](images/havuz_testi.png)
+![Havuz Testi](images/sim1.png)
 
 ## 🤝  Katkıda Bulunma
 
