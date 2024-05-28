@@ -120,11 +120,12 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 #Simülasyonlar
 ![Simülasyon Görüntüsü 1](images/sim2.png)
 ![Simülasyon Görüntüsü 2](images/sim3.png)
+![Harita](images/map.png)
 ![Havuz Testi](images/sim1.png)
 
 ## 🤝  Katkıda Bulunma
 
-ATILAY projesine katkıda bulunmak isterseniz, lütfen [GitHub repo linki](https://github.com/OmerFaruk-Celik/AMKS_AUV_ATILAY) adresinden iletişime geçin.
+ATILAY projesine katkıda bulunmak isterseniz, lütfen [GitHub repo linki](https://github.com/OmerFaruk-Celik/ATILAY) adresinden iletişime geçin.
 
 ## 📄  Lisans
 
