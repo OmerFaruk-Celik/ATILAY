@@ -4,7 +4,7 @@
 
 👋 Teknofest İnsansız Su Altı Otonom yarışmasında ATILAY takımı olarak yola çıkarken hedefimiz sadece yarışmayı kazanmak değildi. Aynı zamanda yazılım alanındaki bilgi birikimimizi siz yeni başlayanlarla paylaşarak Türkiye'deki kaynak sorununa çözüm bulmaktı. 🇹🇷
 
-<img src="https://github.com/OmerFaruk-Celik/ATILAY/blob/main/images/Denizalti.jpeg" alt="Denizaltı" width="600"/>
+<img src="https://github.com/OmerFaruk-Celik/ATILAY/blob/main/images/Denizalti.jpeg" alt="Denizaltı" width="800"/>
 
 
 Bildiğiniz gibi, özellikle Türkçe kaynak bulmak oldukça zor olabiliyor. ATILAY olarak biz de bu zorluğun farkındayız. İşte bu yüzden edindiğimiz tüm bilgi ve tecrübeleri sizlerle paylaşarak bu sorunu aşmanıza yardımcı olmak istiyoruz.
