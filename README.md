@@ -114,6 +114,9 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 ![Algoritma Akış Diyagramı 3](images/algoritma_akis2.png)
 ![Algoritma Akış Diyagramı 4](images/algoritma_akis3.png)
 
+#Didörtgen Tespiti
+![Dikdörgen Tespiti](images/dikdörtgen_tespiti.png)
+
 #Simülasyonlar
 ![Simülasyon Görüntüsü 1](images/sim2.png)
 ![Simülasyon Görüntüsü 2](images/sim3.png)
