@@ -1,6 +1,6 @@
 # ATILAY: Bilgi Paylaşımıyla Güçleniyoruz!
 
-![ATILAY Logosu](https://raw.githubusercontent.com/kullanici_adiniz/repo_adiniz/ana_dal/logo.png)
+
 
 👋 Teknofest İnsansız Su Altı Otonom yarışmasında ATILAY takımı olarak yola çıkarken hedefimiz sadece yarışmayı kazanmak değildi. Aynı zamanda yazılım alanındaki bilgi birikimimizi siz yeni başlayanlarla paylaşarak Türkiye'deki kaynak sorununa çözüm bulmaktı. 🇹🇷
 
