@@ -109,13 +109,14 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 ![Elektronik Bileşenler](images/elektronik_bilesenler.png)
 
 #Algoritmalar
-![Algoritma Akış Diyagramı](images/algoritma_akis0.png)
-![Algoritma Akış Diyagramı](images/algoritma_akis1.png)
-![Algoritma Akış Diyagramı](images/algoritma_akis2.png)
-![Algoritma Akış Diyagramı](images/algoritma_akis3.png)
+![Algoritma Akış Diyagramı 1](images/algoritma_akis0.png)
+![Algoritma Akış Diyagramı 2](images/algoritma_akis1.png)
+![Algoritma Akış Diyagramı 3](images/algoritma_akis2.png)
+![Algoritma Akış Diyagramı 4](images/algoritma_akis3.png)
 
 #Simülasyonlar
-![Simülasyon Görüntüsü](images/sim2.png)
+![Simülasyon Görüntüsü 1](images/sim2.png)
+![Simülasyon Görüntüsü 2](images/sim3.png)
 ![Havuz Testi](images/sim1.png)
 
 ## 🤝  Katkıda Bulunma
