@@ -107,7 +107,7 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 ![Aracın Mekanik Tasarımı](images/mekanik_tasarim.png)
 ![Elektronik Bileşenler](images/elektronik_bilesenler.png)
 ![Algoritma Akış Diyagramı](images/algoritma_akis.png)
-![Simülasyon Görüntüsü](images/simulasyon.png)
+![Simülasyon Görüntüsü](images/sim.png)
 ![Havuz Testi](images/havuz_testi.png)
 
 ## 🤝  Katkıda Bulunma
