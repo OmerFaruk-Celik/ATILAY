@@ -113,7 +113,9 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 ![Algoritma Akış Diyagramı](images/algoritma_akis1.png)
 ![Algoritma Akış Diyagramı](images/algoritma_akis2.png)
 ![Algoritma Akış Diyagramı](images/algoritma_akis3.png)
-![Simülasyon Görüntüsü](images/sim.png)
+
+#Simülasyonlar
+![Simülasyon Görüntüsü](images/sim2.png)
 ![Havuz Testi](images/sim1.png)
 
 ## 🤝  Katkıda Bulunma
