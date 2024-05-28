@@ -103,11 +103,11 @@ Unutmayın, bilgi paylaştıkça çoğalır! ✨
 
 ##  📸  Proje Görselleri
 
-![AMKS Sistem Şeması](images/amks_sistem_şeması.png)
-![Aracın Mekanik Tasarımı](images/mekanik_tasarım.png)
+![AMKS Sistem Şeması](images/amks_sistem_semasi.png)
+![Aracın Mekanik Tasarımı](images/mekanik_tasarim.png)
 ![Elektronik Bileşenler](images/elektronik_bilesenler.png)
-![Algoritma Akış Diyagramı](images/algoritma_akış.png)
-![Simülasyon Görüntüsü](images/simülasyon.png)
+![Algoritma Akış Diyagramı](images/algoritma_akis.png)
+![Simülasyon Görüntüsü](images/simulasyon.png)
 ![Havuz Testi](images/havuz_testi.png)
 
 ## 🤝  Katkıda Bulunma
