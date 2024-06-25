@@ -112,7 +112,7 @@ remote_path = '/home/rasp/atilay/veriler.csv'
 local_path = 'veriler.csv'
 
 # Dosya indirme
-# ssh_download_file(hostname, username, password, remote_path, local_path)
+ssh_download_file(hostname, username, password, remote_path, local_path)
 
 # Veriyi oku ve temizle
 data_temiz = read_and_clean_data(local_path)
