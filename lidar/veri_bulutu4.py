@@ -105,7 +105,7 @@ def plot_data_with_alpha_shape(gdf, lidar_start_point, lidar_vector, alpha_shape
     plt.show()
 
 # SSH bilgileri
-hostname = '192.168.7.3'
+hostname = '192.168.45.134'
 username = 'rasp'
 password = '123'
 remote_path = '/home/rasp/atilay/veriler.csv'
