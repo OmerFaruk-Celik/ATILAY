@@ -21,15 +21,15 @@ def read_and_clean_data(file_path):
     data = pd.read_csv(file_path)
     
     # Y ekseni için aykırı değer temizleme
-    Q1_y = data["y"].quantile(0.25)
-    Q3_y = data["y"].quantile(0.75)
+    Q1_y = data["y"].quantile(0.30)
+    Q3_y = data["y"].quantile(0.70)
     IQR_y = Q3_y - Q1_y
     alt_sinir_y = Q1_y - 1.5 * IQR_y
     ust_sinir_y = Q3_y + 1.5 * IQR_y
     
     # X ekseni için aykırı değer temizleme
-    Q1_x = data["x"].quantile(0.25)
-    Q3_x = data["x"].quantile(0.75)
+    Q1_x = data["x"].quantile(0.30)
+    Q3_x = data["x"].quantile(0.70)
     IQR_x = Q3_x - Q1_x
     alt_sinir_x = Q1_x - 1.5 * IQR_x
     ust_sinir_x = Q3_x + 1.5 * IQR_x
