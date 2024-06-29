@@ -121,7 +121,7 @@ data_temiz = read_and_clean_data(local_path)
 gdf = create_geodataframe(data_temiz)
 
 # Alpha Shape hesapla
-alpha = 0.003#0.003 # Alfa parametresi, verilerinize göre ayarlayabilirsiniz
+alpha = 0.1#0.003 # Alfa parametresi, verilerinize göre ayarlayabilirsiniz
 alpha_shape = calculate_alpha_shape(gdf, alpha)
 
 # LIDAR başlangıç noktası
