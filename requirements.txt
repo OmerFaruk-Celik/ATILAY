@@ -1,1 +1,7 @@
 requests
+
+ubunut18.04
+ardupilot
+ros melodic
+
+çokça sabır
