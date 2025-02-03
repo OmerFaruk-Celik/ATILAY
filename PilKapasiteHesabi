@@ -1,0 +1,37 @@
+To calculate the capacity, nominal current, and maximum current for a battery pack made of 5 parallel and 3 series Molicel INR-18650-P28A cells, we can use the following data from the datasheet:
+
+- Capacity (Typical): 2800 mAh
+- Nominal Voltage: 3.6 V
+- Maximum Discharge Current: 35 A
+
+### Configuration
+- *Series Configuration (3S)*: This means 3 cells in series. The voltage adds up while the capacity remains the same.
+- *Parallel Configuration (5P)*: This means 5 cells in parallel. The capacity adds up while the voltage remains the same.
+
+### Calculations
+
+#### Voltage
+For 3 cells in series:
+\[ \text{Total Voltage} = 3 \times 3.6 \text{ V} = 10.8 \text{ V} \]
+
+#### Capacity
+For 5 cells in parallel:
+\[ \text{Total Capacity} = 5 \times 2800 \text{ mAh} = 14000 \text{ mAh} \]
+
+#### Nominal Current
+For 5 cells in parallel:
+\[ \text{Nominal Current} = 5 \times 2.8 \text{ A} = 14 \text{ A} \]
+Note: The standard charge current per cell is 2.8 A, which is used as the nominal current for each cell.
+
+#### Maximum Current
+For 5 cells in parallel:
+\[ \text{Maximum Current} = 5 \times 35 \text{ A} = 175 \text{ A} \]
+
+### Summary
+
+- *Total Capacity*: 14000 mAh (or 14 Ah)
+- *Total Nominal Voltage*: 10.8 V
+- *Nominal Current*: 14 A
+- *Maximum Current*: 175 A
+
+This configuration will provide a battery pack with a capacity of 14 Ah, a nominal voltage of 10.8 V, a nominal current of 14 A, and a maximum current of 175 A.
