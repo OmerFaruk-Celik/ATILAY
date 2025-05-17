@@ -1,0 +1,10 @@
+rasp@raspberrypi:~/atilay/test $ python3 kontrol.py 
+Traceback (most recent call last):
+  File "/home/rasp/atilay/test/kontrol.py", line 1, in <module>
+    from atilay import atilay
+  File "/usr/lib/python3.9/atilay/atilay.py", line 180
+    
+    ^
+IndentationError: expected an indented block
+rasp@raspberrypi:~/atilay/test $ 
+

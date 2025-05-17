@@ -1,0 +1,284 @@
+
+from atilay import atilay
+import time
+from gpiozero import LED
+from time import sleep
+
+led1=LED(18)
+led2=LED(27)
+
+
+
+
+master=atilay.set(0)
+#atilay.arm(master)
+pwm=1500
+a=0
+
+#time.sleep(2)
+
+def uzaklik():
+	
+	y=atilay.piksel("y")
+	derinlik=atilay.lidar("z")
+	try:
+		y=int(y)
+		derinlik=int(derinlik)
+	except:
+		y=None
+		derinlik=None
+
+	if y != None and derinlik != None and y != 0:
+		distance=abs(240*(derinlik-2)/y)
+		return distance
+	else:
+		return None
+	
+
+def dip_status():
+	dosya=open("dip_status","r")
+	s=dosya.read()
+	dosya.close()
+	if s=="True":
+		return True
+	else:
+		return False
+def dip_cam_activate(a=True):
+	if a:
+		dosya=open("dip_status","w")
+		dosya.write("True")
+		dosya.close()
+
+	else:
+		dosya=open("dip_status","w")
+		dosya.write("False")
+		dosya.close()
+
+def red_status ():
+    
+        dosya = open("/home/rasp/atilay/red_status", "r")
+        gorev = dosya.read()
+        dosya.close()
+
+        if gorev=="True":
+            return True
+        else:
+            return False
+
+
+def rota_duzelt(ilk_derece,master,gorev=False,default=20):
+	son_derece=atilay.pusula(master)
+	fark=son_derece-ilk_derece
+	atilay.sifirla()
+	if abs(fark)>=default:
+
+		while True:
+			gorev=red_status()
+			son_derece=atilay.pusula(master)
+			fark=son_derece-ilk_derece
+			if gorev:
+				x,y=ortala(master)
+				atilay.sifirla()
+				return gorev
+
+			if fark>5:
+				atilay.sag_sol(1470)
+			elif fark<-5:
+				atilay.sag_sol(1532)
+
+			else:
+				atilay.sifirla()
+				return False
+
+
+
+
+def don(master,tekrar=8,gorev=False):
+	kontrol=0
+
+	ilk_derece=atilay.pusula(master)
+	print("dondeyim..")
+	atilay.sifirla()
+	while True:
+		atilay.sag_sol(1530,master)
+
+		son_derece=atilay.pusula(master)
+		son_fark=abs(son_derece-ilk_derece)
+		gorev=red_status()
+
+		if abs(son_fark>=45) or gorev:
+			ilk_derece=atilay.pusula(master)
+			kontrol+=1
+			if kontrol>=tekrar or gorev:
+				atilay.sifirla()
+				return gorev
+
+
+
+
+
+atilay.servo(7,1300,master)
+def ortala(master,dip_cam=False):
+	tekrar=0
+	while tekrar <= 500:
+		tekrar+=1
+
+		try:
+			x=int(atilay.piksel("x"))
+			y=int(atilay.piksel("y"))
+		except:
+			print("int error...")
+			
+
+		if x>5:
+			atilay.yanla(1540,master)
+			#atilay.sifirla()
+		elif x<-5:
+			atilay.yanla(1480,master)
+			#atilay.sifirla
+
+		if dip_cam:
+			if y>5:
+				atilay.ileri_geri(1540,master)
+				#atilay.sifirla()
+			elif y<-5:
+				atilay.ileri_geri(1440,master)
+				#atilay.sifirla()
+
+	atilay.sifirla()
+	return x,y
+
+
+def ileri(master,gorev=red_status()):
+	print("ileri fonksiyonuna geldim")
+	if gorev:
+		return True
+
+	ilk_derece=atilay.pusula(master)
+
+	while True:
+		for i in range(100):
+			atilay.ileri_geri(1540,master)
+			gorev=rota_duzelt(ilk_derece,master,gorev)
+			if gorev:
+				return gorev
+		gorev=don(master,2)
+		if gorev:
+			atilay.sifirla()
+			return gorev
+
+
+
+
+
+
+
+atilay.sifirla()
+#atilay.arm(master)
+pwm=1470
+ekle=1
+# sag_sol = 1499 - 1512  orta: 1505
+# ileri_geri = 1487 - 1491 orta: 1489
+# bat_cik = 1507 - 1515 orta: 1511
+# yanla = 1500 - 1503 orta: 1501 
+
+
+def dip_ortala(master,gorev):
+
+        while True:
+                ledon()
+                x,y=ortala(master)
+                gorev=red_status()
+                if not gorev:
+                        atilay.sifirla()
+                        #ledoff(led1,led2)
+                        break
+                if x <20 and x>-20 and y<20 and y>-20:
+                        atilay.sifirla()
+                        sayac=0
+                        while True:
+                                time.sleep(0.1)
+                                sayac+=1
+                                gorev=red_status()
+                                if not gorev:
+                                        break
+                                #ledon(led1,led2)
+                                time.sleep(0.5)
+                                atilay.bat_cik(1400,master)
+                                if sayac>=300:
+                                        break
+
+atilay.derinlik(20)
+atilay.servo(7,2200,master)
+
+dip_cam_activate(False)
+time.sleep(2)
+atilay.arm(master)
+while True:
+        led2.on()
+        print("ana döngüdeyim..")
+        gorev=don(master,6)
+
+        if not gorev:
+                led2.off()
+                gorev=ileri(master)
+
+
+        while gorev:
+            #led2.on()    
+            x,y=ortala(master)
+            print("x ön kamera için ortalanıyor :",x,x <= 80 and x >=- 80)
+            if x<=40 and x>=-40:
+                for i in range(20):
+                        atilay.ileri_geri(1520,master)
+                        #time.sleep(0.2)
+                        x,y=ortala(master)
+                        distance=uzaklik()
+                        print("mesafe",distance)
+                        if distance != None:
+                                if distance<50:
+                                        atilay.sifirla()
+                                        dip_cam_activate(True)
+                                        print("dip cam aktifleştirip, ön cam devre dışı bırakıyorum")
+                                        ilk_derece=atilay.pusula(master)
+                                        time.sleep(1)
+                                        while True:
+                                                led2.off()
+                                                led1.on()
+                                
+                                                print("ileri motorları aktif")
+                                                rota_duzelt(ilk_derece,master,gorev=False,default=15)
+                                                atilay.ileri_geri(1520,master)
+                                                if red_status():
+                                                        print("dip kamerası hedefi algıladı")
+                                                        atilay.sifirla()
+                                                        break
+                                        while dip_status():
+                                                #led2.off()
+                                                led1.on()
+                                                x,y=ortala(master,True)
+                                                print("ortala Fonksiyonu dip kamera için devrede")
+                                                if x<20 and x>-20 and y<20 and y>-20:
+                                                        tekrar=0
+                                                        while True:
+                                                                led1.on()                 
+                                                                time.sleep(2)
+                                                                print("batıyor")
+                                                                #atilay.bat_cik(1400)
+                                                                atilay.bat_cik(1450,master) #derinlik(-50)
+                                                                tekrar+=1
+                                                                if tekrar>=15:
+                                                                        atilay.sifirla()
+                                                                        dip_cam_activate(False)
+                                                                        time.sleep(2)
+                                                                        gorev=False
+                                                                        led1.off()
+                                                                        break
+                        if not gorev:
+                            print("Batış motorlarını durdurdum. Şimdi yukarı çıkıyorum..")
+                            #for i in range(100):
+                            atilay.bat_cik(1560,master) #derinlik()
+                            time.sleep(1)
+                            break                       
+
+
